@@ -10,14 +10,14 @@ app = Flask(__name__)
 
 @app.route("/clasification", methods=["POST"])
 def clasification():
-    if Flask.request.method == "POST":
+    if request.method == "POST":
         # ---------------------------
         # Cargar el modelo guardado
 
         model = load_model("app\modelo4.h5")
         maxlen = 256
         # Prompt the user to enter a review for classification
-        user_review = Flask.request.files["texto"].read().decode("utf-8")
+        user_review = request.files["text"].read()
 
         # the movie was very stupid and bad  the worsdt movie in al times  :negative
         # nice video : positive
