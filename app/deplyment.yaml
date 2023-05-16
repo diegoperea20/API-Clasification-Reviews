@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: <nombre de la imagen de Docker>
+          image: diegoperea/api-reviews
           ports:
-            - containerPort: 5000
+            - containerPort: 8080
           env:
             - name: FLASK_APP
               value: app.py
