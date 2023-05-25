@@ -17,7 +17,7 @@ def clasification():
         model = load_model("app\modelo4.h5")
         maxlen = 256
         # Prompt the user to enter a review for classification
-        user_review = request.files["text"].read()
+        user_review = request.files["txt"].read()
 
         # the movie was very stupid and bad  the worsdt movie in al times  :negative
         # nice video : positive
